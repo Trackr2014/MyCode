@@ -20,13 +20,15 @@ public class TestController {
 	JedisPool jedisPool;
 	@RequestMapping("/helloworld")
     public String helloworld() {
-		logger.info("你好 hello日志");
-		jedisPool = new JedisPool(new JedisPoolConfig(), "127.0.0.1");
-		jsJedis = jedisPool.getResource();
-		jsJedis.auth("123456");
-		jsJedis.set("001", "helloJedis");
-		logger.error("错误");
-	    return jsJedis.get("001");
+		for(int i=0; i<50000; i++){
+			logger.info("你好 hello日志");
+//			jedisPool = new JedisPool(new JedisPoolConfig(), "127.0.0.1");
+//			jsJedis = jedisPool.getResource();
+//			jsJedis.auth("123456");
+//			jsJedis.set("001", "helloJedis");
+			logger.error("错误");
+		}
+	    return "hello";
     }	
 	@RequestMapping("/springBoot")
 	public String springBoot() {
