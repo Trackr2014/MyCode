@@ -1,7 +1,6 @@
 /**
  * @author wang.pengfei
- *
- */
+ * */
 package TaskManager.QuartzDemo.controller;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,9 +28,25 @@ public class TestController {
 		@SuppressWarnings("resource")
 		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
 		RedisUtil redisUtil=(RedisUtil) context.getBean("redisUtil");
-		redisUtil.set("001", "wang.pengfei");
+		redisUtil.set("key", "wang.pengfei");
 		redisUtil.get("001");
 		System.out.println(redisUtil.get("001"));
+		redisUtil.set("key", "王朋");
+		System.out.println(redisUtil.get("key"));
+		logger.info("执行了springBoot");
+		return "this a demo for springBoot";		
+	}
+	
+	@RequestMapping("/springBoot2")
+	public String springBoot2() {
+		@SuppressWarnings("resource")
+		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
+		RedisUtil redisUtil=(RedisUtil) context.getBean("redisUtil");
+		redisUtil.set("key", "wang.pengfei");
+		redisUtil.get("001");
+		System.out.println(redisUtil.get("001"));
+		redisUtil.set("key", "王朋");
+		System.out.println(redisUtil.get("key"));
 		logger.info("执行了springBoot");
 		return "this a demo for springBoot";		
 	}
