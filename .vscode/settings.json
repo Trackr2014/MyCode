@@ -4,5 +4,9 @@
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "yapf",
     "editor.tabSize": 4,
-    "git.enabled": true
+    "git.enabled": true,
+    "git.path": "C:/Program Files/Git/git-cmd.exe",
+    "git.autoRepositoryDetection": true,
+    "git.alwaysSignOff": true,
+    "git.decorations.enabled": true
 }
