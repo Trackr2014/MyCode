@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "C:/Python35/python.exe",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "editor.tabSize": 4,
+    "git.enabled": true
+}

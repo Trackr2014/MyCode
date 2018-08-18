@@ -11,7 +11,7 @@ COUNT = 0
 HTMLTEXT = ""
 
 
-# 数据保存
+# 数据保存 test
 def save2Text(path, data):
     # 判断，若文件夹不存在则创建路径
     if not os.path.exists(path):
