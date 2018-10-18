@@ -1,6 +1,5 @@
-package Util;
+package com.spring.demo.util;
 
-import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.io.IOException;

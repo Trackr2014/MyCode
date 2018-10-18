@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
-Implementation-Title: QuartzDemo
+Implementation-Title: SpringBootDemo
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: wang.pengfei
-Implementation-Vendor-Id: TaskManager
+Implementation-Vendor-Id: com.spring.demo
 Build-Jdk: 1.8.0_152
 Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse

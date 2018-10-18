@@ -1,4 +1,4 @@
-package TaskManager.QuartzDemo;
+package com.spring.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableAutoConfiguration
 @SpringBootConfiguration
-@ComponentScan("TaskManager.QuartzDemo")
+@ComponentScan("com.spring.demo")
 public class SpringBootApplication {
 
     public static void main(String[] args) {
