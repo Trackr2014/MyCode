@@ -10,16 +10,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.demo.util.RedisUtil;
+import com.spring.demo.redis.service.RedisService;
 
+/**
+ * @author wang.pengfei
+ *
+ */
 @RestController
 public class RedisTestController {
 	private static final Logger logger = LoggerFactory.getLogger(RedisTestController.class);
 	
     @Autowired
-    private RedisUtil redisUtil;
+    private RedisService redisService;
     
-	@RequestMapping("/helloworld")
+	/**
+	 * <p> test log settings </p>
+	 * @return
+	 */
+	@RequestMapping("/LOG")
     public String helloworld() {
 		for(int i=0; i<10; i++){
 			logger.info("info");
@@ -28,24 +36,15 @@ public class RedisTestController {
 		}
 	    return "hello";
     }	
-	@RequestMapping("/springBoot")
-	public String springBoot() {
-
-		redisUtil.get("001");
-		System.out.println(redisUtil.get("001"));
-		redisUtil.set("key", "王朋");
-		System.out.println(redisUtil.get("key"));
-		return "this a demo for springBoot";		
-	}
 	
-	@RequestMapping("/springBoot2")
-	public String springBoot2() {
-
-		redisUtil.set("key", "wang.pengfei");
-		redisUtil.get("001");
-		System.out.println(redisUtil.get("001"));
-		redisUtil.set("key", "王朋");
-		System.out.println(redisUtil.get("key"));
-		return "this a demo for springBoot";		
+	
+	/**
+	 * <p> this a example to show reids </p>
+	 * @return
+	 */
+	@RequestMapping("/redis/set")
+	public String redisCotroller() {
+		String result = redisService.setTest();
+		return result;
 	}
 }
