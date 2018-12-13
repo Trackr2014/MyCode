@@ -5,7 +5,7 @@
  * @author wang.pengfei
  *
  */
-package com.spring.demo.redis.service;
+package com.spring.demo.service;
 
 
 public interface RedisService {
