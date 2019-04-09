@@ -34,7 +34,12 @@ public class RabbitMQTestController {
 	public String testPublish() {
 		String publishMsgString = "publish aaa";
 		System.out.println("publish生产者消息：" + publishMsgString);
-		rabbitMQTestService.sendPublishMsg(publishMsgString);
-		return "publish send msg successed!";
+		boolean flag = rabbitMQTestService.sendPublishMsg(publishMsgString);
+		if (flag) {
+			return "publish send msg successed!";
+		} else {
+			return "publish send msg fail!";
+		}
+		
 	}
 }

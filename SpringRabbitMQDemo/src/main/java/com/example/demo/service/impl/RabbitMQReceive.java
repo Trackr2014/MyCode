@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RabbitMQReceive {
-
+	
 	@RabbitHandler
 	@RabbitListener(queues = "hello")
 	public void receive(@Payload String str) {
