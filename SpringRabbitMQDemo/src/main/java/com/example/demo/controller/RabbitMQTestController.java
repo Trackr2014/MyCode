@@ -53,13 +53,15 @@ public class RabbitMQTestController {
 	public String testHeaders() {
 		Map<String, Object> msg = new HashMap<String, Object>();
 		msg.put("debug", "debug");
+		msg.put("info", "info");
+		msg.put("error", "error");
 		MessageProperties messageProperties = new MessageProperties();
 		// 设置消息是否持久化。Persistent表示持久化，Non-persistent表示不持久化
 		messageProperties.setDeliveryMode(MessageDeliveryMode.NON_PERSISTENT);
 		messageProperties.setContentType("UTF-8");
 		messageProperties.getHeaders().putAll(msg);
 		Message message = new Message("hello,rabbit_headers_any！".getBytes(), messageProperties);
-		System.out.println("publish生产者消息：" + new String(message.getBody().toString()));
+		System.out.println("publish生产者消息：" + new String(message.getBody()));
 		rabbitMQTestService.sendHeadersMsg(message);
 		return "Headers send msg successed!";
 	}

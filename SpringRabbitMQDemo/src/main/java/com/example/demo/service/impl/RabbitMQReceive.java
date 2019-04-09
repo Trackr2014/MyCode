@@ -53,26 +53,32 @@ public class RabbitMQReceive {
 	}
 
 	@RabbitHandler
-	@RabbitListener(queues = "headersQueue")
-	public void receiveHeaders(Message message, Channel channel, @Headers Map<String, Object> header) {
-		if (header.containsKey("error")) {
-			try {
-				channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
-				System.out.println("错误消息需要重新确认！");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} else if (header.containsKey("debug")) {
+	@RabbitListener(queues = "headersQueueA")
+	public void receiveHeadersA(Message message, Channel channel) {
+		if (message.getMessageProperties().getHeaders().containsKey("debug")) {
 			try {
 				channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
 				System.out.println("debug消息直接丢弃！");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else {
+		} else if (message.getMessageProperties().getHeaders().containsKey("info")) {
 			try {
 				channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
 				System.out.println("rabbitmq.publishQueueC 接收消息：" + new String(message.getBody()));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	@RabbitHandler
+	@RabbitListener(queues = "headersQueueB")
+	public void receiveHeadersB(Message message, Channel channel, @Headers Map<String, Object> header) {
+		if (header.containsKey("error")) {
+			try {
+				channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
+				System.out.println("错误消息需要重新确认！");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
