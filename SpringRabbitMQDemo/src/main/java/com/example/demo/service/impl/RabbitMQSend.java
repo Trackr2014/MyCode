@@ -1,5 +1,8 @@
 package com.example.demo.service.impl;
 
+import java.util.UUID;
+
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +27,8 @@ public class RabbitMQSend implements RabbitMQTestService {
 
 	@Override
 	public boolean sendPublishMsg(String publishMsgString) {
-		rabbitTemplate.convertAndSend("publishExchange", "", publishMsgString);
+		CorrelationData cData = new CorrelationData(UUID.randomUUID().toString());
+		rabbitTemplate.convertAndSend("publishExchange", "", publishMsgString, cData);
 		return true;
 	}	
 }
