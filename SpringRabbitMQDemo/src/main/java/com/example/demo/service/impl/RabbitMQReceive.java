@@ -3,17 +3,17 @@ package com.example.demo.service.impl;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.sql.Time;
+import java.util.Map;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.support.AmqpHeaders;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.retry.backoff.Sleeper;
 import org.springframework.stereotype.Service;
 
 import com.rabbitmq.client.Channel;
-
 
 @Service
 public class RabbitMQReceive {
@@ -54,20 +54,29 @@ public class RabbitMQReceive {
 	}
 
 	@RabbitHandler
-	@RabbitListener(queues = "publishQueueC")
-	public void receivePublish3(Message message, Channel channel) {
-		for (int i = 0; i < 10; i++) {
+	@RabbitListener(queues = "headersQueue")
+	public void receiveHeaders(Message message, Channel channel) {
+		if (message.getMessageProperties().getHeaders().containsKey("error")) {
 			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
+				channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true);
+				System.out.println("错误消息需要重新确认！");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else if (message.getMessageProperties().getHeaders().containsKey("debug")) {
+			try {
+				channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
+				System.out.println("debug消息直接丢弃！");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
+				System.out.println("rabbitmq.publishQueueC 接收消息：" + new String(message.getBody()));
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		try {
-			channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		System.out.println("rabbitmq.publishQueueC 接收消息：" + new String(message.getBody()));
 	}
 }
