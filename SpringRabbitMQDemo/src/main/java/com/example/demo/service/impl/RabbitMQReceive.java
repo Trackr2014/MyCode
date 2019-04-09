@@ -3,19 +3,12 @@ package com.example.demo.service.impl;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import org.springframework.amqp.core.AcknowledgeMode;
-import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
-import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
-import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
-
-import com.rabbitmq.client.Channel;
 
 @Service
 public class RabbitMQReceive {
@@ -23,24 +16,24 @@ public class RabbitMQReceive {
 	@Autowired
 	ConnectionFactory connectionFactory;
 	
-	@Bean
-	public SimpleMessageListenerContainer messageContainer() {
-		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
-		container.setExposeListenerChannel(true);
-		container.setMaxConcurrentConsumers(1);
-		container.setConcurrentConsumers(1);
-		container.setAcknowledgeMode(AcknowledgeMode.MANUAL); // 设置确认模式手工确认
-		container.setMessageListener(new ChannelAwareMessageListener() {
-
-			@Override
-			public void onMessage(Message message, Channel channel) throws Exception {
-				byte[] body = message.getBody();
-				System.out.println("receive msg : " + new String(body));
-				channel.basicAck(message.getMessageProperties().getDeliveryTag(), false); // 确认消息成功消费
-			}
-		});
-		return container;
-	}
+//	@Bean
+//	public SimpleMessageListenerContainer messageContainer() {
+//		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
+//		container.setExposeListenerChannel(true);
+//		container.setMaxConcurrentConsumers(1);
+//		container.setConcurrentConsumers(1);
+//		container.setAcknowledgeMode(AcknowledgeMode.MANUAL); // 设置确认模式手工确认
+//		container.setMessageListener(new ChannelAwareMessageListener() {
+//
+//			@Override
+//			public void onMessage(Message message, Channel channel) throws Exception {
+//				byte[] body = message.getBody();
+//				System.out.println("receive msg : " + new String(body));
+//				channel.basicAck(message.getMessageProperties().getDeliveryTag(), false); // 确认消息成功消费
+//			}
+//		});
+//		return container;
+//	}
 	
 	
 	@RabbitHandler
