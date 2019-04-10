@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SetOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -27,7 +26,7 @@ public class RedisUtils {
 	 * @param value
 	 * @return
 	 */
-	public boolean set(final String key, String value) {
+	public boolean add(final String key, String value) {
 		boolean result = false;
 		try {
 			ValueOperations<String, String> operations = redisTemplate.opsForValue();
@@ -46,7 +45,7 @@ public class RedisUtils {
 	 * @param value
 	 * @return
 	 */
-	public boolean set(final String key, String value, Long expireTime) {
+	public boolean add(final String key, String value, Long expireTime) {
 		boolean result = false;
 		try {
 			ValueOperations<String, String> operations = redisTemplate.opsForValue();
@@ -142,36 +141,49 @@ public class RedisUtils {
 	/**
 	 * 列表添加
 	 * 
-	 * @param k
-	 * @param v
+	 * @param string
+	 * @param list
 	 */
-	public void lPush(String k, String v) {
+	public void listAdd(String key, List<String> values) {
 		ListOperations<String, String> list = redisTemplate.opsForList();
-		list.rightPush(k, v);
+		for (String value : values) {
+			list.rightPush(key, value);
+		}
 	}
-
+	
 	/**
 	 * 列表获取
-	 * 
-	 * @param k
-	 * @param l
-	 * @param l1
+	 * @param key
 	 * @return
 	 */
-	public List<String> lRange(String k, long l, long l1) {
+	public List<String> listRange(String key) {
 		ListOperations<String, String> list = redisTemplate.opsForList();
-		return list.range(k, l, l1);
+		Long rang = list.size(key);
+		return list.range(key, 0, rang);
+	}
+	/**
+	 * 列表获取
+	 * @param key
+	 * @param start
+	 * @param end
+	 * @return
+	 */
+	public List<String> listRange(String key, long start, long end) {
+		ListOperations<String, String> list = redisTemplate.opsForList();
+		return list.range(key, start, end);
 	}
 
 	/**
 	 * 集合添加
 	 * 
 	 * @param key
-	 * @param value
+	 * @param aSet
 	 */
-	public void add(String key, String[] value) {
+	public void setAdd(String key, Set<String> datas) {
 		SetOperations<String, String> set = redisTemplate.opsForSet();
-		set.add(key, value);
+		for (String data : datas) {
+			set.add(key, data);
+		}
 	}
 
 	/**
@@ -209,4 +221,5 @@ public class RedisUtils {
 		ZSetOperations<String, String> zset = redisTemplate.opsForZSet();
 		return zset.rangeByScore(key, scoure, scoure1);
 	}
+
 }
