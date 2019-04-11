@@ -24,4 +24,10 @@ public class RedisTestController {
 	public String getData() {
 		return redisTestService.get();
 	}
+	
+	@RequestMapping(value="/save/many", method=RequestMethod.GET)
+	public String saveData2() {
+		redisTestService.saveMany();
+		return "Successfully";
+	}
 }
