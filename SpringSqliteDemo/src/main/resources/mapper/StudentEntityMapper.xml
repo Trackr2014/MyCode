@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.StudentEntityMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.StudentEntity">
+        <!-- WARNING - @mbg.generated -->
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="age" jdbcType="VARCHAR" property="age" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+    </resultMap>
+    
+    <select id="select" resultMap="BaseResultMap">
+    	SELECT * FROM t_resource_base_info WHERE id=#{id}
+    </select>
+    <update id="update" parameterType="com.inspur.icollector.extensions.entity.ResourceBaseInfoEntity">
+    	UPDATE
+			t_resource_base_info
+		SET
+			os_name = #{osName},
+			ip = #{ip},
+			model = #{model},
+			vendor = #{vendor}
+		WHERE
+			id = #{id}
+    </update>
+    
+    <select id="selectAll" resultMap="BaseResultMap">
+    	SELECT * FROM t_resource_base_info
+    </select>
+ </mapper>
