@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.mapper.StudentEntityMapper;
@@ -20,6 +21,7 @@ public class SqliteDemoServiceImpl implements SqliteDemoService {
 	StudentEntityMapper studentEntityMapper;
 	
 	@Override
+	@Transactional(rollbackFor=Exception.class)
 	public void insertFirst() {
 		List<StudentEntity> studentEntities = new ArrayList<StudentEntity>();
 		for (int i = 0; i < Number; i++) {
@@ -36,9 +38,10 @@ public class SqliteDemoServiceImpl implements SqliteDemoService {
 	}
 
 	@Override
+	@Transactional(rollbackFor=Exception.class)
 	public void insertSec() {
 		List<StudentEntity> studentEntities = new ArrayList<StudentEntity>();
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < Number; i++) {
 			StudentEntity studentEntity = new StudentEntity(UUID.randomUUID().toString(), "TOM", "12", "SHANGHAI");
 			studentEntities.add(studentEntity);
 		}

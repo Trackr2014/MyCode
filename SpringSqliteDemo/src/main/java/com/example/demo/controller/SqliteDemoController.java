@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.SqliteDemoService;
 
-@RestController("/v1/sqlite")
+@RestController
+@RequestMapping("/v1/sqlite")
 public class SqliteDemoController {
 	
 	@Autowired
