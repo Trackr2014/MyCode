@@ -23,4 +23,8 @@
 			(#{item.id},#{item.name},#{item.age},#{item.address})
 		</foreach>
 	</insert>
+	
+	<select id="getStudent" resultMap="BaseResultMap">
+		SELECT * FROM t_student
+	</select>
 </mapper>

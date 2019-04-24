@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.mapper.StudentEntityMapper;
 import com.example.demo.service.SqliteDemoService;
+import com.example.demo.utils.SortList;
 
 @Service
 public class SqliteDemoServiceImpl implements SqliteDemoService {
@@ -50,6 +51,14 @@ public class SqliteDemoServiceImpl implements SqliteDemoService {
 		long endTime = System.currentTimeMillis();
 		long timeDef = endTime - startTime;
 		System.out.println("批量插入" + Number + "条耗时：" + timeDef);
+	}
+
+	@Override
+	public List<StudentEntity> getList() {
+		List<StudentEntity> list = studentEntityMapper.getStudent();
+		SortList<StudentEntity> sortList = new SortList<>(StudentEntity.class);
+		sortList.getSortList(list, "Name", "ASC");
+		return list;
 	}
 
 }

@@ -13,5 +13,9 @@ public interface StudentEntityMapper {
 	void insert(StudentEntity studentEntity);
 
 	void insertList(@Param("studentEntities")List<StudentEntity> studentEntities);
+
+	List<StudentEntity> getStudent();
+
+
 	
 }
