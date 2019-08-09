@@ -61,4 +61,8 @@ public class SqliteDemoServiceImpl implements SqliteDemoService {
 		return list;
 	}
 
+	public static void main(String[] args) {
+		StringBuilder stringBuilder = new StringBuilder().append("2222").append(":").append(8);
+		System.out.println(stringBuilder.toString());
+	}
 }

@@ -29,6 +29,7 @@ public class SqliteDemoController {
 	
 	@RequestMapping(value="/get-list", method=RequestMethod.GET)
 	public List<StudentEntity> getStudent(){
+		
 		return sqliteDemoService.getList();
 	}
 }
