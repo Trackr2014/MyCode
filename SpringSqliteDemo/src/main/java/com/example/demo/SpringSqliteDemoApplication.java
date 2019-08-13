@@ -23,24 +23,24 @@ public class SpringSqliteDemoApplication {
 	Integer httpsPort;
 
 	// springboot2 写法
-    @Bean
-    public TomcatServletWebServerFactory tomcatServletWebServerFactory(Connector connector){
-        TomcatServletWebServerFactory tomcat=new TomcatServletWebServerFactory(){
-            @Override
-            protected void postProcessContext(Context context) {
-                SecurityConstraint securityConstraint=new SecurityConstraint();
-                securityConstraint.setUserConstraint("CONFIDENTIAL");
-                SecurityCollection collection=new SecurityCollection();
-                collection.addPattern("/*");
-                securityConstraint.addCollection(collection);
-                context.addConstraint(securityConstraint);
-            }
-        };
-        tomcat.addAdditionalTomcatConnectors(connector);
-        return tomcat;
-    }
+	@Bean
+	public TomcatServletWebServerFactory tomcatServletWebServerFactory(Connector connector) {
+		TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+			@Override
+			protected void postProcessContext(Context context) {
+				SecurityConstraint securityConstraint = new SecurityConstraint();
+				securityConstraint.setUserConstraint("CONFIDENTIAL");
+				SecurityCollection collection = new SecurityCollection();
+				collection.addPattern("/*");
+				securityConstraint.addCollection(collection);
+				context.addConstraint(securityConstraint);
+			}
+		};
+		tomcat.addAdditionalTomcatConnectors(connector);
+		return tomcat;
+	}
 
-    @Bean
+	@Bean
 	public Connector httpConnector() {
 		System.out.println("启用http转https协议，http端口：" + this.httpPort + "，https端口：" + this.httpsPort);
 		Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
