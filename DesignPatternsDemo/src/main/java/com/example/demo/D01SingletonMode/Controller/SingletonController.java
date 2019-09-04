@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.D01SingletonMode.Instance.Signletion;
 
+/**
+ * @author wang.pengfei
+ *	单例模式
+ */
 @RestController
 @RequestMapping(value = "/singleton")
-public class TestDemoController {
+public class SingletonController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public void getResult() {
