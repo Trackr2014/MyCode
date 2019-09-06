@@ -1,12 +1,9 @@
 package com.example.demo.D01SingletonMode.Instance;
 
-import org.springframework.stereotype.Component;
-
 /**
  * @author wang.pengfei
  *  设计单例模式
  */
-@Component
 public class Signletion implements DoSomeThing{
 	
 	private static volatile Signletion signletion = null;

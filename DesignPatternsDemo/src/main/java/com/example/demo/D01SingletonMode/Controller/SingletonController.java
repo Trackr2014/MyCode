@@ -22,7 +22,6 @@ public class SingletonController {
 				public void run() {
 					Signletion signletion = Signletion.getInstance();
 					signletion.print();
-					
 				}
 			};
 			runnable.run();
