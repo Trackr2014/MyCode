@@ -13,36 +13,36 @@ import com.example.demo.singleCase.ApplicationConfig;
 @RequestMapping(value = "/v1/properties")
 public class PropertiesValueController {
 
-	@Autowired
-	PropertiesValueBean propertiesValueBean;
+    @Autowired
+    PropertiesValueBean propertiesValueBean;
 
-	@Value("${http.port}")
-	private String httpPort;
+    @Value("${http.port}")
+    private String httpPort;
 
-	@RequestMapping(value = "/bean", method = RequestMethod.GET)
-	public PropertiesValueBean getProperties() {
-		return propertiesValueBean;
-	}
+    @RequestMapping(value = "/bean", method = RequestMethod.GET)
+    public PropertiesValueBean getProperties() {
+        return propertiesValueBean;
+    }
 
-	@RequestMapping(value = "/port", method = RequestMethod.GET)
-	public String getPortProperties() {
-		return httpPort;
-	}
+    @RequestMapping(value = "/port", method = RequestMethod.GET)
+    public String getPortProperties() {
+        return httpPort;
+    }
 
-	@RequestMapping(value = "/string", method = RequestMethod.GET)
-	public String getPropertyString() {
-		for (int i = 0; i < 10; i++) {
-			new Thread() {
-				public void run() {
-					ApplicationConfig config = ApplicationConfig.getInstance();
-					System.out.println("=====" + config);
-					System.out.println(config.getConfiguration()+ "======");
-				}
+    @RequestMapping(value = "/string", method = RequestMethod.GET)
+    public String getPropertyString() {
+        for (int i = 0; i < 10; i++) {
+            new Thread() {
+                public void run() {
+                    ApplicationConfig config = ApplicationConfig.getInstance();
+                    System.out.println("=====" + config);
+                    System.out.println(config.getConfiguration() + "======");
+                }
 
-			}.start();
-			System.out.println("i======" + i);
-		}
-		return httpPort;
-	}
+            }.start();
+            System.out.println("i======" + i);
+        }
+        return httpPort;
+    }
 
 }

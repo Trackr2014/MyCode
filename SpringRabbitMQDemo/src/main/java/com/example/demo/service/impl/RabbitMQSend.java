@@ -14,34 +14,34 @@ import com.example.demo.service.RabbitMQTestService;
 @Component
 public class RabbitMQSend implements RabbitMQTestService {
 
-	@Autowired
-	private RabbitTemplate rabbitTemplate;
-	
-	@Override
-	public void sendMsg(String str) {
-		rabbitTemplate.convertAndSend("hello", str);
-	}	
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
-	@Override
-	public void sendTopicMsg(String topicMsgString) {
-		rabbitTemplate.convertAndSend("exchangeA", "log.debug", topicMsgString);
-	}
+    @Override
+    public void sendMsg(String str) {
+        rabbitTemplate.convertAndSend("hello", str);
+    }
 
-	@Override
-	public boolean sendPublishMsg(String publishMsgString) {
-		CorrelationData cData = new CorrelationData(UUID.randomUUID().toString());
-		rabbitTemplate.convertAndSend("publishExchange", "", publishMsgString, cData);
-		return true;
-	}
+    @Override
+    public void sendTopicMsg(String topicMsgString) {
+        rabbitTemplate.convertAndSend("exchangeA", "log.debug", topicMsgString);
+    }
 
-	@Override
-	public void sendHeadersMsg(Map<String, Object> msg) {
-		rabbitTemplate.convertAndSend("headersExchange", null, msg);
-	}
+    @Override
+    public boolean sendPublishMsg(String publishMsgString) {
+        CorrelationData cData = new CorrelationData(UUID.randomUUID().toString());
+        rabbitTemplate.convertAndSend("publishExchange", "", publishMsgString, cData);
+        return true;
+    }
 
-	@Override
-	public void sendHeadersMsg(Message headerMsgString) {
-		rabbitTemplate.convertAndSend("headersExchange", null, headerMsgString);
-		
-	}	
+    @Override
+    public void sendHeadersMsg(Map<String, Object> msg) {
+        rabbitTemplate.convertAndSend("headersExchange", null, msg);
+    }
+
+    @Override
+    public void sendHeadersMsg(Message headerMsgString) {
+        rabbitTemplate.convertAndSend("headersExchange", null, headerMsgString);
+
+    }
 }

@@ -16,34 +16,34 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class HeaderConfig {
-	
-	@Bean
-	public Queue headerQueueA() {
-		return new Queue("headersQueueA");
-	}
-	
-	@Bean
-	public Queue headerQueueB() {
-		return new Queue("headersQueueB");
-	}
-	
-	@Bean
-	HeadersExchange headersExchange() {
-		return new HeadersExchange("headersExchange", true, true);
-	}
-	
-	@Bean
-	Binding bindingQueue1Exchange(Queue headerQueueA, HeadersExchange headersExchange) {
-		Map<String, Object> header = new HashMap<String, Object>();
-		header.put("info", "info");
-		header.put("debug", "debug");
-		return BindingBuilder.bind(headerQueueA).to(headersExchange).whereAll(header).match();
-	}
-	
-	@Bean
-	Binding bindingQueue2Exchange(Queue headerQueueB, HeadersExchange headersExchange) {
-		Map<String, Object> header = new HashMap<String, Object>();
-		header.put("error", "error");
-		return BindingBuilder.bind(headerQueueB).to(headersExchange).where("error").exists();
-	}
+
+    @Bean
+    public Queue headerQueueA() {
+        return new Queue("headersQueueA");
+    }
+
+    @Bean
+    public Queue headerQueueB() {
+        return new Queue("headersQueueB");
+    }
+
+    @Bean
+    HeadersExchange headersExchange() {
+        return new HeadersExchange("headersExchange", true, true);
+    }
+
+    @Bean
+    Binding bindingQueue1Exchange(Queue headerQueueA, HeadersExchange headersExchange) {
+        Map<String, Object> header = new HashMap<String, Object>();
+        header.put("info", "info");
+        header.put("debug", "debug");
+        return BindingBuilder.bind(headerQueueA).to(headersExchange).whereAll(header).match();
+    }
+
+    @Bean
+    Binding bindingQueue2Exchange(Queue headerQueueB, HeadersExchange headersExchange) {
+        Map<String, Object> header = new HashMap<String, Object>();
+        header.put("error", "error");
+        return BindingBuilder.bind(headerQueueB).to(headersExchange).where("error").exists();
+    }
 }

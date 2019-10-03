@@ -10,20 +10,20 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class DirectConfig {
-	
-	@Bean
-	public Queue helloworldQueue() {
-		return new Queue("hello");
-	}
-	
-	@Bean
-	DirectExchange directExchange() {
-		return new DirectExchange("direct", true, true);
-	}
-	
-	@Bean
-	DirectExchangeRoutingKeyConfigurer bandingExchageMsg(Queue helloworldQueue, DirectExchange directExchange) {
-		return BindingBuilder.bind(helloworldQueue).to(directExchange);
-	}
-	
+
+    @Bean
+    public Queue helloworldQueue() {
+        return new Queue("hello");
+    }
+
+    @Bean
+    DirectExchange directExchange() {
+        return new DirectExchange("direct", true, true);
+    }
+
+    @Bean
+    DirectExchangeRoutingKeyConfigurer bandingExchageMsg(Queue helloworldQueue, DirectExchange directExchange) {
+        return BindingBuilder.bind(helloworldQueue).to(directExchange);
+    }
+
 }

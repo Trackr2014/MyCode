@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.HuaweiTrapAlarmBeanMapper">
+    <resultMap id="BaseResultMap"
+               type="com.example.demo.bean.HuaweiTrapAlarmBean">
+        <!-- WARNING - @mbg.generated -->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="oid" jdbcType="VARCHAR" property="oid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="reverse_id" jdbcType="VARCHAR" property="reverseId"/>
+        <result column="init_alarm_id" jdbcType="VARCHAR" property="initAlarmId"/>
+        <result column="system_default" jdbcType="VARCHAR" property="systemDefault"/>
+        <result column="fault_flag" jdbcType="VARCHAR" property="faultFlag"/>
+        <result column="log_collect_flag" jdbcType="VARCHAR" property="logCollectFlag"/>
+    </resultMap>
+
+    <select id="getReverOidISnull" resultMap="BaseResultMap">
+        SELECT * FROM t_init_alarm WHERE reverse_id ISNULL AND status != 0
+    </select>
+
+    <select id="getByStatusAndHaveReveroid" resultMap="BaseResultMap">
+        SELECT a.* FROM t_init_alarm as a WHERE a.reverse_id NOTNULL AND a.status = #{i}
+    </select>
+
+    <select id="getByStatus123AndHaveReveroid" resultMap="BaseResultMap">
+        SELECT a.* FROM t_init_alarm as a WHERE a.reverse_id NOTNULL AND (a.status =1 OR a.status=2 OR a.status=3)
+    </select>
+
+    <select id="getAllResource" resultMap="BaseResultMap">
+        SELECT * FROM t_init_alarm
+    </select>
+    
+    <select id="getAllFromZhcnSql" resultMap="BaseResultMap">
+        SELECT * FROM t_init_alarm_oid_cn
+    </select>
+    
+	<select id="getEnAlarm" resultMap="BaseResultMap">
+        SELECT a.* FROM t_init_alarm_oid_en as a WHERE a.id = #{id}
+    </select>
+</mapper>

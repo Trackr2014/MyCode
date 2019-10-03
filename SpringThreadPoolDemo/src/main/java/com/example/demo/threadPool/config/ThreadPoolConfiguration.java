@@ -17,48 +17,48 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
 @EnableAsync
-public class ThreadPoolConfiguration implements AsyncConfigurer{
-	
-	
-	public class MySelfRejectClass implements RejectedExecutionHandler {
+public class ThreadPoolConfiguration implements AsyncConfigurer {
 
-		@Override
-		public void rejectedExecution(Runnable cmdRunnable, ThreadPoolExecutor ePoolExecutor) {
-			try {
-				ePoolExecutor.getQueue().put(cmdRunnable);
-			} catch (InterruptedException e) {
-				LOG.error(e.getMessage());
-				e.printStackTrace();
-			}
 
-		}
+    public class MySelfRejectClass implements RejectedExecutionHandler {
 
-	}
+        @Override
+        public void rejectedExecution(Runnable cmdRunnable, ThreadPoolExecutor ePoolExecutor) {
+            try {
+                ePoolExecutor.getQueue().put(cmdRunnable);
+            } catch (InterruptedException e) {
+                LOG.error(e.getMessage());
+                e.printStackTrace();
+            }
 
-	private static final Logger LOG = LoggerFactory.getLogger(ThreadPoolConfiguration.class);
+        }
 
-	@Bean
-	public Executor getPoolExecutor() {
-		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-		executor.setCorePoolSize(1);
-		executor.setMaxPoolSize(10);
-		executor.setQueueCapacity(5);
-		executor.setKeepAliveSeconds(100);
-		executor.setThreadNamePrefix("MyExcutor-");
-		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+    }
+
+    private static final Logger LOG = LoggerFactory.getLogger(ThreadPoolConfiguration.class);
+
+    @Bean
+    public Executor getPoolExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(1);
+        executor.setMaxPoolSize(10);
+        executor.setQueueCapacity(5);
+        executor.setKeepAliveSeconds(100);
+        executor.setThreadNamePrefix("MyExcutor-");
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
 //		executor.setRejectedExecutionHandler(new MySelfRejectClass());
-		executor.initialize();
-		return executor;
-	}
-	
-	public AsyncUncaughtExceptionHandler getsAsyncUncaughtExceptionHandler() {
-		return new AsyncUncaughtExceptionHandler() {
-			@Override
-			public void handleUncaughtException(Throwable ex, Method method, Object... params) {
-				LOG.error("任务超长！！");
-				LOG.error(ex.getMessage());
-			}
-		};
-		
-	}
+        executor.initialize();
+        return executor;
+    }
+
+    public AsyncUncaughtExceptionHandler getsAsyncUncaughtExceptionHandler() {
+        return new AsyncUncaughtExceptionHandler() {
+            @Override
+            public void handleUncaughtException(Throwable ex, Method method, Object... params) {
+                LOG.error("任务超长！！");
+                LOG.error(ex.getMessage());
+            }
+        };
+
+    }
 }

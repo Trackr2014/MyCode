@@ -1,31 +1,31 @@
 <Configuration status="debug" monitorInterval="300">
-	<properties>
-		<property name="LOG_HOME">D:/logs</property>
-		<property name="FILE_NAME">mylog</property>
-	</properties>
-	<Appenders>
-		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-		</Console>
-		<!-- 按规则复制生成新的日志备份 -->
-		<RollingRandomAccessFile name="MyFile"			
-			fileName="${LOG_HOME}/${FILE_NAME}.log"
-			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd HH}-%i.log">
-			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-			<Policies>
-				<!-- 1小时另存一次或者超过10M另存一次 -->
-				<TimeBasedTriggeringPolicy interval="1" />
-				<SizeBasedTriggeringPolicy size="10 MB" />
-			</Policies>
-			<!-- 指定最多保存的文件个数 -->
-			<DefaultRolloverStrategy max="20" />
-		</RollingRandomAccessFile>
-	</Appenders>
+    <properties>
+        <property name="LOG_HOME">D:/logs</property>
+        <property name="FILE_NAME">mylog</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- 按规则复制生成新的日志备份 -->
+        <RollingRandomAccessFile name="MyFile"
+                                 fileName="${LOG_HOME}/${FILE_NAME}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd HH}-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <!-- 1小时另存一次或者超过10M另存一次 -->
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <!-- 指定最多保存的文件个数 -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+    </Appenders>
 
-	<Loggers>
-		<Root level="all">
-			<AppenderRef ref="Console" level="info"/>
-			<AppenderRef ref="MyFile" level="info"/>
-		</Root>
-	</Loggers>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console" level="info"/>
+            <AppenderRef ref="MyFile" level="info"/>
+        </Root>
+    </Loggers>
 </Configuration>  

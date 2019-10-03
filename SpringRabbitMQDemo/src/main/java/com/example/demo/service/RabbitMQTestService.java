@@ -5,14 +5,14 @@ import java.util.Map;
 import org.springframework.amqp.core.Message;
 
 public interface RabbitMQTestService {
-	
-	void sendMsg(String str);
 
-	void sendTopicMsg(String topicMsgString);
+    void sendMsg(String str);
 
-	boolean sendPublishMsg(String publishMsgString);
-	
-	void sendHeadersMsg(Message message);
+    void sendTopicMsg(String topicMsgString);
 
-	void sendHeadersMsg(Map<String, Object> msg);
+    boolean sendPublishMsg(String publishMsgString);
+
+    void sendHeadersMsg(Message message);
+
+    void sendHeadersMsg(Map<String, Object> msg);
 }

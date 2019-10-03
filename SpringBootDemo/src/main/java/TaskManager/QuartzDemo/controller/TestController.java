@@ -1,6 +1,6 @@
 /**
  * @author wang.pengfei
- * */
+ */
 package TaskManager.QuartzDemo.controller;
 
 import org.apache.logging.log4j.LogManager;
@@ -14,40 +14,42 @@ import Util.RedisUtil;
 
 @RestController
 public class TestController {
-	private static final Logger logger = LogManager.getLogger(TestController.class);
-	@RequestMapping("/helloworld")
+    private static final Logger logger = LogManager.getLogger(TestController.class);
+
+    @RequestMapping("/helloworld")
     public String helloworld() {
-		for(int i=0; i<50000; i++){
-			logger.info("你好 hello日志");
-			logger.error("错误");
-		}
-	    return "hello";
-    }	
-	@RequestMapping("/springBoot")
-	public String springBoot() {
-		@SuppressWarnings("resource")
-		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
-		RedisUtil redisUtil=(RedisUtil) context.getBean("redisUtil");
-		redisUtil.set("key", "wang.pengfei");
-		redisUtil.get("001");
-		System.out.println(redisUtil.get("001"));
-		redisUtil.set("key", "王朋");
-		System.out.println(redisUtil.get("key"));
-		logger.info("执行了springBoot");
-		return "this a demo for springBoot";		
-	}
-	
-	@RequestMapping("/springBoot2")
-	public String springBoot2() {
-		@SuppressWarnings("resource")
-		ApplicationContext context=new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
-		RedisUtil redisUtil=(RedisUtil) context.getBean("redisUtil");
-		redisUtil.set("key", "wang.pengfei");
-		redisUtil.get("001");
-		System.out.println(redisUtil.get("001"));
-		redisUtil.set("key", "王朋");
-		System.out.println(redisUtil.get("key"));
-		logger.info("执行了springBoot");
-		return "this a demo for springBoot";		
-	}
+        for (int i = 0; i < 50000; i++) {
+            logger.info("你好 hello日志");
+            logger.error("错误");
+        }
+        return "hello";
+    }
+
+    @RequestMapping("/springBoot")
+    public String springBoot() {
+        @SuppressWarnings("resource")
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
+        RedisUtil redisUtil = (RedisUtil) context.getBean("redisUtil");
+        redisUtil.set("key", "wang.pengfei");
+        redisUtil.get("001");
+        System.out.println(redisUtil.get("001"));
+        redisUtil.set("key", "王朋");
+        System.out.println(redisUtil.get("key"));
+        logger.info("执行了springBoot");
+        return "this a demo for springBoot";
+    }
+
+    @RequestMapping("/springBoot2")
+    public String springBoot2() {
+        @SuppressWarnings("resource")
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext-redis.xml");
+        RedisUtil redisUtil = (RedisUtil) context.getBean("redisUtil");
+        redisUtil.set("key", "wang.pengfei");
+        redisUtil.get("001");
+        System.out.println(redisUtil.get("001"));
+        redisUtil.set("key", "王朋");
+        System.out.println(redisUtil.get("key"));
+        logger.info("执行了springBoot");
+        return "this a demo for springBoot";
+    }
 }

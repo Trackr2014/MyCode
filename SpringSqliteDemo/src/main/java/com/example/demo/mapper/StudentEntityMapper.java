@@ -10,12 +10,11 @@ import com.example.demo.entity.StudentEntity;
 @Mapper
 public interface StudentEntityMapper {
 
-	void insert(StudentEntity studentEntity);
+    void insert(StudentEntity studentEntity);
 
-	void insertList(@Param("studentEntities")List<StudentEntity> studentEntities);
+    void insertList(@Param("studentEntities") List<StudentEntity> studentEntities);
 
-	List<StudentEntity> getStudent();
+    List<StudentEntity> getStudent();
 
 
-	
 }

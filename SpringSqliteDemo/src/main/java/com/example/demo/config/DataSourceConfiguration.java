@@ -12,27 +12,27 @@ import com.alibaba.druid.support.http.WebStatFilter;
 
 @Configuration
 public class DataSourceConfiguration {
-	
-	@ConfigurationProperties("spring.datasource.druid")
-	public DruidDataSource dataSource(){
-		DruidDataSource dataSource = new DruidDataSource();
-		return dataSource;
-	}
-	
-	@Bean
-	public ServletRegistrationBean<?> servletRegistrationBean() {
-		ServletRegistrationBean<?> serv = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
-		serv.addInitParameter("loginUserName", "admin");
-		serv.addInitParameter("loginPassword", "123456a?");
-		return serv;
-	}
-	
-	@Bean
-	public FilterRegistrationBean<?> statFilter(){
-		FilterRegistrationBean<?> fileFilterRegistrationBean = new FilterRegistrationBean<>(new WebStatFilter());
-		fileFilterRegistrationBean.addUrlPatterns("/*");
-		fileFilterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
-		return fileFilterRegistrationBean;
-		
-	}
+
+    @ConfigurationProperties("spring.datasource.druid")
+    public DruidDataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        return dataSource;
+    }
+
+    @Bean
+    public ServletRegistrationBean<?> servletRegistrationBean() {
+        ServletRegistrationBean<?> serv = new ServletRegistrationBean<StatViewServlet>(new StatViewServlet(), "/druid/*");
+        serv.addInitParameter("loginUserName", "admin");
+        serv.addInitParameter("loginPassword", "123456a?");
+        return serv;
+    }
+
+    @Bean
+    public FilterRegistrationBean<?> statFilter() {
+        FilterRegistrationBean<?> fileFilterRegistrationBean = new FilterRegistrationBean<WebStatFilter>(new WebStatFilter());
+        fileFilterRegistrationBean.addUrlPatterns("/*");
+        fileFilterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+        return fileFilterRegistrationBean;
+
+    }
 }

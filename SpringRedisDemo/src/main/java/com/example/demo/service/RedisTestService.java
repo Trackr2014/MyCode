@@ -2,10 +2,10 @@ package com.example.demo.service;
 
 public interface RedisTestService {
 
-	void save();
+    void save();
 
-	String get();
+    String get();
 
-	void saveMany();
+    void saveMany();
 
 }

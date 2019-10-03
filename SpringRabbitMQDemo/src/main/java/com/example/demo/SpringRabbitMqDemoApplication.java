@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringRabbitMqDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringRabbitMqDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringRabbitMqDemoApplication.class, args);
+    }
 
 }

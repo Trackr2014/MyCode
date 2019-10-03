@@ -1,17 +1,19 @@
-{"properties": [
-  {
-    "name": "spring.rabbitmq.listener.concurrency",
-    "type": "java.lang.String",
-    "description": "A description for 'spring.rabbitmq.listener.concurrency'"
-  },
-  {
-    "name": "spring.rabbitmq.listener.max-concurrency",
-    "type": "java.lang.String",
-    "description": "A description for 'spring.rabbitmq.listener.max-concurrency'"
-  },
-  {
-    "name": "spring.rabbitmq.listener.prefetch",
-    "type": "java.lang.String",
-    "description": "A description for 'spring.rabbitmq.listener.prefetch'"
-  }
-]}
+{
+  "properties": [
+    {
+      "name": "spring.rabbitmq.listener.concurrency",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.rabbitmq.listener.concurrency'"
+    },
+    {
+      "name": "spring.rabbitmq.listener.max-concurrency",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.rabbitmq.listener.max-concurrency'"
+    },
+    {
+      "name": "spring.rabbitmq.listener.prefetch",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.rabbitmq.listener.prefetch'"
+    }
+  ]
+}
