@@ -1,0 +1,266 @@
+ tempLowerNonCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.1,temp Lower Non Critical Going Low,低温(非严重渐低)告警,2,0x0100000E0005
+ tempLowerNonCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.2,temp Lower Non Critical Going Low Deassert,低温(非严重渐低)告警解除,0,0x0100000E0005
+ tempLowerCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.33,temp Lower Critical Going Low,低温(严重渐低)告警,3,0x0100000E0005
+ tempLowerCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.34,temp Lower Critical Going Low Deassert,低温(严重渐低)告警解除,0,0x0100000E0005
+ tempLowerNonRecoverlGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.65,temp Lower Non-Recoverable Going Low,低温(不可恢复渐低)告警,3,0x0100000E0005
+ tempLowerNonRecoverlGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.66,temp Lower Non-Recoverable Going Low Deassert,低温(不可恢复渐低)告警解除,0,0x0100000E0005
+ tempUpperNonCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.113,temp Upper Non-Critical Going High,高温(非严重渐高)告警,2,0x0100000E0005
+ tempUpperNonCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.114,temp Upper Non-Critical Going High Deassert,高温(非严重渐高)告警解除,0,0x0100000E0005
+ tempUpperCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.145,temp Upper Critical Going High,高温(严重渐高)告警,3,0x0100000E0005
+ tempUpperCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.146,temp Upper Critical Going High deassert,高温(严重渐高)告警解除,0,0x0100000E0005
+ tempUpperNonRecoverGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.177,temp Upper Non-Recoverable Going High,高温(不可恢复渐高)告警,3,0x0100000E0005
+ tempUpperNonRecoverGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1.178,temp Upper Non-Recoverable Going High Deassert,高温(不可恢复渐高)告警解除,0,0x0100000E0005
+ voltageLowerNonCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.1,voltage Lower Non Critical Going Low,低压(非严重渐低)告警,2,0x0100000E0003
+ voltageLowerNonCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.2,voltage Lower Non-Critical Going High,低压(非严重渐低)告警解除,0,0x0100000E0003
+ voltageLowerCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.33,voltage Lower Critical Going Low,低压(严重渐低)告警,3,0x0100000E0003
+ voltageLowerCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.34,voltage Lower Critical Going Low Deassert,低压(严重渐低)告警解除,0,0x0100000E0003
+ voltageLowerNonRecoverGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.65,voltage Lower Non-Recoverable Going Low,低压(不可逆渐低)告警,3,0x0100000E0003
+ voltageLowerNonRecoverGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.66,voltage Lower Non-Recoverable Going Low Deassert,低压(不可逆渐低)告警解除,0,0x0100000E0003
+ voltageUpperNonCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.113,voltage Upper Non-Critical Going High,高压(非严重渐高)告警,2,0x0100000E0003
+ voltageUpperNonCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.114,voltage Upper Non-Critical Going High Deassert,高压(非严重渐高)告警解除,0,0x0100000E0003
+ voltageUpperCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.145,voltage Upper Critical Going High,高压(严重渐高)告警,3,0x0100000E0003
+ voltageUpperCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.146,voltage Upper Critical Going High Deassert,高压(严重渐高)告警解除,0,0x0100000E0003
+ voltageUpperNonRecoverGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.177,voltage Upper Non-Recoverable Going High,高压(不可逆渐高)告警,3,0x0100000E0003
+ voltageUpperNonRecoverGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2.178,voltage Upper Non-Recoverable Going High Deassert,高压(不可逆渐高)告警解除,0,0x0100000E0003
+ currentLowerNonCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.1,Current Lower Non Critical Going Low,当前下限非关键变低告警,2,0x010000000006
+ currentLowerNonCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.2,Current Lower Non Critical Going Low Deassert,当前下限非关键变低告警解除,0,0x010000000006
+ currentLowerCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.33,Current Lower Critical Going Low,当前下限临界变低告警,3,0x010000000006
+ currentLowerCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.34,Current Lower Critical Going Low Deassert,当前下限临界变低告警解除,0,0x010000000006
+ currentLowerNonRecoverGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.65,Current Lower Non-Recoverable Going Low,当前下限不可恢复性变低告警,3,0x010000000006
+ currentLowerNonRecoverGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.66,Current Lower Non-Recoverable Going Low Deassert,当前下限不可恢复性变低告警解除,0,0x010000000006
+ currentUpperNonCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.113,Current Upper Non-Critical Going High,当前上限非关键变高告警,2,0x010000000006
+ currentUpperNonCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.114,Current Upper Non-Critical Going High Deassert,当前上限非关键变高告警解除,0,0x010000000006
+ currentUpperCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.145,Current Upper Critical Going High,当前上限临界变高告警,2,0x010000000006
+ currentUpperCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.146,Current Upper Critical Going High Deassert,当前上限临界变高告警解除,0,0x010000000006
+ currentUpperNonRecoverGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.177,Current Upper Non-Recoverable Going High,当前上限不可恢复变高告警,2,0x010000000006
+ currentUpperNonRecoverGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.3.178,Current Upper Non-Recoverable Going High Deassert,当前上限不可恢复变高告警解除,0,0x010000000006
+ fanSpeedLowerNonCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.1,Fan speed Lower Non Critical Going Low,风扇转速较低(非严重)告警,2,0x0100000A0003
+ fanSpeedLowerNonCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.2,Fan speed Lower Non Critical Going Low Deassert,风扇转速较低(非严重)告警解除,0,0x0100000A0003
+ fanSpeedLowerCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.33,Fan speed Lower Critical Going Low,风扇转速较低(严重)告警,3,0x0100000A0003
+ fanSpeedLowerCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.34,Fan speed Lower Critical Going Low Deassert,风扇转速较低(严重)告警,0,0x0100000A0003
+ fanSpeedLowerNonRecoverGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.65,Fan speed Lower Non-Recoverable Going Low,风扇转速较低(不可逆)告警,3,0x0100000A0003
+ fanSpeedLowerNonRecoverGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.66,Fan speed Lower Non-Recoverable Going Low Deassert,风扇转速较低(不可逆)告警解除,0,0x0100000A0003
+ fanSpeedUpperNonCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.113,Fan speed Upper Non-Critical Going High,风扇转速较高(非严重)告警,2,0x0100000A0003
+ fanSpeedUpperNonCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.114,Fan speed Upper Non-Critical Going High Deassert,风扇转速较高(非严重)告警解除,0,0x0100000A0003
+ fanSpeedUpperCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.145,Fan speed Upper Critical Going High,风扇转速较高(严重)告警,3,0x0100000A0003
+ fanSpeedUpperCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.146,Fan speed Upper Critical Going High Deassert,风扇转速较高(严重)告警解除,0,0x0100000A0003
+ fanSpeedUpperNonRecoverGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.177,Fan speed Upper Non-Recoverable Going High,风扇转速较高(不可逆)告警,3,0x0100000A0003
+ fanSpeedUpperNonRecoverGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.178,Fan speed Upper Non-Recoverable Going High Deassert,风扇转速较高(不可逆)告警解除,0,0x0100000A0003
+ fanNotPresentStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.1793,Fan Absent,风扇不在位告警,3,0x0100000A0002
+ fanPresentStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.1809,Fan Present,风扇在位告警解除,0,0x0100000A0002
+ fanSpeedStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.1825,Fan Speed Too Low,风扇转速过低告警,2,0x0100000A0003
+ fanSpeedStatusDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.1826,Fan Speed Too Low Deassert,风扇转速过低告警解除,2,0x0100000A0003
+ fanHotPlugStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.2001,Fan Hot Plug,风扇热插拔告警,2,0x0100000A0002
+ fanHotPlugStatusDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.4.2002,Fan Hot Plug Deassert,风扇热插拔告警解除,0,0x0100000A0002
+ alertChassisIntrusion,.1.3.6.1.4.1.27500.1.1.1.1.500.10.5.1,General Chassis Intrusion,通用机箱入侵告警,5,0x010000000006
+ alertChassisIntrusionLANLeashLost,.1.3.6.1.4.1.27500.1.1.1.1.500.10.5.65,General Chassis Intrusion,通用机箱入侵LAN丢失告警,2,0x010000000006
+ alertChassisIntrusionLANLeashLostDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.5.66,General Chassis Intrusion deassert,通用机箱入侵LAN丢失告警解除,0,0x010000000006
+ alertCPUCATError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.1,CPU CAT error,CPU CAT错误,3,0x010000010001
+ alertCPUCATErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.2,CPU CAT error deassert,CPU CAT错误恢复,0,0x010000010001
+ alertCPUThermalTrip,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.17,CPU thermal trip,CPU热跳闸,3,0x010000010001
+ alertCPUThermalTripDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.18,CPU thermal trip deassert,CPU热跳闸恢复,0,0x010000010001
+ alertCPUSelfTestFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.33,CPU FRB1/BIST failure,CPU FRB1/BIST故障,3,0x010000010001
+ alertCPUSelfTestFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.34,CPU FRB1/BIST failure deassert,CPU FRB1/BIST故障恢复,0,0x010000010001
+ alertCPUCfgError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.81,CPU configure error,CPU配置错误,3,0x010000010001
+ alertCPUCfgErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.82,CPU configure error deassert,CPU配置错误清除,0,0x010000010001
+ alertCPUPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.114,CPU Presence deassert,CPU不在位,3,0x010000010001
+ alertCPUPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.113,CPU Presence,CPU在位,0,0x010000010001
+ alertCPUOffline,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.129,CPU offline,CPU离线,3,0x010000010001
+ alertCPUOfflineDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.130,CPU offline deassert,CPU离线恢复,0,0x010000010001
+ alertCPUMCE,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.177,CPU MCE occured,发生CPU MCE,2,0x010000010001
+ alertCPUMCEDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.178,CPU MCE deassert,CPU MCE无效,0,0x010000010001
+ alertVMSELinkFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.193,CPU VMSE link failure in mirror mode,镜像模式下的CPU VMSE链接故障,2,0x010000010001
+ alertVMSELinkFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.7.194,CPU VMSE link failure in mirror mode deassert,镜像模式下的CPU VMSE链接故障解除,0,0x010000010001
+ PowerLowerNonCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.1,Power Lower Non Critical Going Low,功率下限非关键变低告警,2,0x010000040003
+ PowerLowerNonCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.2,Power Lower Non Critical Going Low Deassert,功率下限非关键变低告警解除,0,0x010000040003
+ PowerLowerCriticalGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.33,Power Lower Critical Going Low,功率下限临界变低告警,3,0x010000040003
+ PowerLowerCriticalGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.34,Power Lower Critical Going Low Deassert,功率下限临界变低告警解除,0,0x010000040003
+ PowerLowerNonRecoverGoingLow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.65,Power Lower Non-Recoverable Going Low,功率下限不可恢复变低告警,3,0x010000040003
+ PowerLowerNonRecoverGoingLowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.66,Power Lower Non-Recoverable Going Low Deassert,功率下限不可恢复变低告警解除,3,0x010000040003
+ PowerUpperNonCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.113,Power Upper Non-Critical Going High,功率上限非关键变高告警,2,0x010000040003
+ PowerUpperNonCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.114,Power Upper Non-Critical Going High Deassert,功率上限非关键变高告警解除,0,0x010000040003
+ PowerUpperCriticalGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.145,Power Upper Critical Going High,功率上限临界变高告警,3,0x010000040003
+ PowerUpperCriticalGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.146,Power Upper Critical Going High Deassert,功率上限临界变高告警解除,0,0x010000040003
+ PowerUpperNonRecoverGoingHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.177,Power Upper Non-Recoverable Going High,功率上限不可恢复变高告警,3,0x010000040003
+ PowerUpperNonRecoverGoingHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.178,Power Upper Non-Recoverable Going High Deassert,功率上限不可恢复变高告警解除,0,0x010000040003
+ alertPsuPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28162,Power Supply Presence Deassert,电源不在位,3,0x010000040002
+ alertPsuPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28161,Power Supply Presence,电源在位,0,0x010000040002
+ alertPsuFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28177,Power Supply Fault,电源故障,2,0x010000040001
+ alertPsuFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28178,Power Supply Fault Deassert,电源故障解除,0,0x010000040001
+ alertPsuPredictiveFailure,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28193,Power Supply Predictive Failure,电源预测故障,2,0x010000040001
+ alertPsuPredictiveFailureDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28194,Power Supply Predictive Failure Deassert,电源预测故障解除,0,0x010000040001
+ alertPsuInputLost,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28209,Power Supply Input Lost,电源输入丢失告警,2,0x010000040001
+ alertPsuInputLostDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28210,Power Supply Input Lost Deassert,电源输入丢失告警解除,0,0x010000040001
+ alertPsuOutOfRange,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28225,Power Supply Input lost or out-of-range,电源输入丢失或超出范围告警,2,0x010000040001
+ alertPsuOutOfRangeDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28226,Power Supply Input lost or out-of-range Deassert,电源输入丢失或超出范围告警解除,0,0x010000040001
+ alertPsuOutOfRangeButPresent,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28241,Power Supply Input Lost Or Out-of-range But Present,电源输入丢失或超出范围但存在,2,0x010000040001
+ alertPsuOutOfRangeButPresentDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28242,Power Supply Input Lost Or Out-of-range But Present Deassert,电源输入丢失或超出范围但存在无效,0,0x010000040001
+ alertPsuConfigError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28257,Power Supply Configuration Error,电源配置错误,2,0x010000040001
+ alertPsuConfigErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28258,Power Supply Configuration Error Deassert,电源配置错误解除,0,0x010000040001
+ alertPsuStandbyState,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28273,Power Supply Inactive (in standby state),电源未激活(处于待机状态),2,0x010000040001
+ alertPsuStandbyStateDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28274,Power Supply Inactive (in standby state) Deassert,电源未激活(处于待机状态)无效,0,0x010000040001
+ alertPsuHotPlug,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28369,Power Supply Unit Hot Plug,电源单元热插拔,2,0x010000040001
+ alertPsuHotPlugDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28370,Power Supply Unit Hot Plug Deassert,电源单元热插拔解除,0,0x010000040001
+ alertPsuOverTemp,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28385,Power Supply Unit Over Temperature,电源单元过热,2,0x010000040001
+ alertPsuOverTempDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.8.28386,Power Supply Unit Over Temperature Deassert,电源单元过热解除,0,0x010000040001
+ alertCorrectableECC,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.1,memory correctable ECC error occurred,内存可纠正的ECC错误,2,0x010000050001
+ alertCorrectableECCDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.2,memory correctable ECC error deassert,内存可校正ECC错误解除,0,0x010000050001
+ alertUncorrectableECC,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.17,memory uncorrectable ECC error occurred,无法纠正的ECC错误,2,0x010000050001
+ alertUncorrectableECCDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.18,memory uncorrectable ECC error deassert,无法纠正的ECC错误解除,0,0x010000050001
+ alertMemoryECCLimitation,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.81,memory correctable ECC logging limit reached detected,检测到内存可校正的ECC日志记录限制,1,0x010000050001
+ alertMemoryECCLimitationDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.82,memory correctable ECC logging limit reached deassert,内存可校正的ECC日志记录限制达到无效,0,0x010000050001
+ alertMemoryPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.98,memory presence deassert,内存不在位,3,0x010000050001
+ alertMemoryPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.97,memory presence detected,内存在位,0,0x010000050001
+ alertMemoryCfgError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.113,memory config error detected,检测到内存配置错误,2,0x010000050001
+ alertMemoryCfgErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.114,memory config error deassert,内存配置错误清除,0,0x010000050001
+ alertMemorySpareDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.130,memory spare deassert,空闲内存,1,0x010000050001
+ alertMemorySpare,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.129,memory spare detected,空闲内存解决,0,0x010000050001
+ alertMemoryOvertemp,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.161,memory overtemperature detected,内存过热告警,2,0x010000050001
+ alertMemoryOvertempDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.12.162,memory overtemperature deassert,内存过热告警解除,0,0x010000050001
+ alertHardDiskPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.2,Harddisk presence deassert,硬盘不在位,3,0x010000030003
+ alertHardDiskPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.1,Harddisk presence detected,硬盘在位,0,0x010000030003
+ alertHardDiskFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.17,Harddisk fault detected,检测到硬盘故障,2,0x010000030001
+ alertHardDiskFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.18,Harddisk fault deassert,硬盘故障告警解除,0,0x010000030001
+ alertHardDiskPredictiveFailure,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.33,Hard disk predictive failure,硬盘预测故障,2,0x010000030001
+ alertHardDiskPredictiveFailureDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.34,Hard disk predictive failure deassert,硬盘预测性故障解除,0,0x010000030001
+ alertRAIDArrayFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.97,RAID array fail detected,磁盘阵列错误告警,2,0x010000080001
+ alertRAIDArrayFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.98,RAID array fail deassert,磁盘阵列错误告警解除,0,0x010000080001
+ alertRAIDRebuild,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.113,RAID rebuild detected,磁盘阵列重建告警,2,0x010000080001
+ alertRAIDRebuildDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.114,RAID rebuild deassert,磁盘阵列重建告警解除,0,0x010000080001
+ alertRAIDRebuildAborted,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.129,RAID rebuild aborted detected,磁盘阵列重建中断告警,2,0x010000080001
+ alertRAIDRebuildAbortedDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.130,RAID rebuild aborted deassert,磁盘阵列重建中断告警解除,0,0x010000080001
+ alertHardDiskHotplug,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.209,Hard disk hot plug,硬盘热插拔告警,2,0x010000030001
+ alertHardDiskHotplugDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.13.210,Hard disk hot plug deassert,硬盘热插告警解除,0,0x010000030001
+ alertSystemFirmwareHang,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.17,System firmware hang,系统固件中断,2,0x0100000E000A
+ alertSystemFirmwareHangDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.18,System firmware hang deassert,系统固件中断告警解除,0,0x0100000E000A
+ alertPS2USBFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.1793,Unrecoverable PS/2 or USB keyboard failure,ps2/usb接口故障,2,0x010000000006
+ alertPS2USBFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.1794,Unrecoverable PS/2 or USB keyboard failure deassert,ps2/usb接口故障解除,0,0x010000000006
+ alertVideoControllerFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.2305,Unrecoverable video controller failure,视频控制器故障,2,0x010000000006
+ alertVideoControllerFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.2306,Unrecoverable video controller failure deassert,视频控制器故障解除,0,0x010000000006
+ alertCPUVoltageMismatch,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.3073,CPU voltage mismatch,CPU电压不匹配告警,2,0x010000010001
+ alertCPUVoltageMismatchDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.15.3074,CPU voltage mismatch deassert,CPU电压不匹配告警解除,0,0x010000010001
+ alertSELClearedAssert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.16.33,SEL log area is cleared,SEL日志区域已清除,5,0x0100000E000A
+ alertSELAlmostFullAssert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.16.81,SEL almost full assert,SEL日志存满,1,0x0100000E000A
+ alertSELAlmostFullDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.16.82,SEL almost full deassert,SEL日志存满告警解除,0,0x0100000E000A
+ alertSysEventInstance,.1.3.6.1.4.1.27500.1.1.1.1.500.10.18.65,PEF action,PEF动作,5,0x010000000006
+ alertSystemError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.18.33,System hang up/reset. For more information,系统挂断/重置,3,0x0100000E000A
+ alertSystemErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.18.34,System hang up/reset deassert,系统挂断/重置置告警解除,0,0x0100000E000A
+ alertTimestampClockSync,.1.3.6.1.4.1.27500.1.1.1.1.500.10.18.81,timestamp clock sync,时间戳时钟同步,5,0x010000000006
+ alertPowerButtonPressed,.1.3.6.1.4.1.27500.1.1.1.1.500.10.20.1,Power button pressed,按下电源按钮,5,0x010000000006
+ alertCableStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.27.17,SAS or Harddisk backplane cable config error,SAS或硬盘背板电缆配置错误,2,0x010000000006
+ alertCableStatusDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.27.18,SAS or Harddisk backplane cable config error deassert,SAS或硬盘背板电缆配置错误解除,0,0x010000000006
+ alertSysRestartUnknown,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.113,system restart cause unknown,系统重启原因未知,5,0x0100000E000A
+ alertSysRestartChassisCtrl,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.369,system restart cause chassis control,系统重启导致机箱控制,5,0x0100000E000A
+ alertSysRestartPowerButton,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.881,system restart cause power button pressed,系统重启导致按下电源按钮,5,0x0100000E000A
+ alertSysRestartWatchdogCtrl,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.1137,system restart cause Watchdog control,系统重启原因看门狗控制,5,0x0100000E000A
+ alertSysRestartAlwaysRestore,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.1649,system restart cause always power up,系统重启导致始终开机,5,0x0100000E000A
+ alertSysRestartRestorePrevState,.1.3.6.1.4.1.27500.1.1.1.1.500.10.29.1905,system restart cause always restore previous state,系统重启原因总是恢复到以前的状态,5,0x0100000E000A
+ alertNoBootableMedia,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.1,boot error,无引导媒体告警,2,0x0100000E000A
+ alertNoBootableMediaDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.2,boot error,无引导媒体告警解除,0,0x0100000E000A
+ alertNoBootableDisk,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.17,boot error,无启动盘告警,2,0x0100000E000A
+ alertNoBootableDiskDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.18,boot error,无启动盘告警解除,0,0x0100000E000A
+ alertPXENotFound,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.33,boot error,没有发现PXE服务器,2,0x0100000E000A
+ alertPXENotFoundDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.34,boot error,没有发现PXE服务器告警解除,0,0x0100000E000A
+ alertInvalidBootSector,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.49,boot error,无效引导扇区告警,2,0x0100000E000A
+ alertInvalidBootSectorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.30.50,boot error,无效引导扇区告警解除,0,0x0100000E000A
+ alertHardwareAddrFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.1,Hardware address in fault status,硬件地址故障,2,0x0100000E000A
+ alertHardwareAddrFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.2,Hardware address in fault status deassert,硬件地址故障解除,0,0x0100000E000A
+ alertDeviceInstallDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.34,Device installed deassert,取消安装设备,5,0x0100000E000A
+ alertDeviceInstall,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.33,Device installed,装置已安装,5,0x0100000E000A
+ alertEthLinkDown,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.129,System Eth link down,网络连接丢失告警,2,0x0100000E000A
+ alertEthLinkDownDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.130,System Eth link down deassert,网络连接丢失告警解除,0,0x0100000E000A
+ alertMemBrdMigrate,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.145,Spare Device,备用设备,5,0x0100000E000A
+ alertMemBrdMigrateDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.146,Spare Device deassert,备用设备置为无效,5,0x0100000E000A
+ alertPCIEStatus,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.257,PCIe Error,PCIe错误,2,0x010000070001
+ alertPCIEStatusDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.258,PCIe Error deassert,PCIe错误解除,0,0x010000070001
+ alertFanFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.2049,fan in fault status,风扇故障,2,0x0100000A0001
+ alertFanFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.2050,fan in fault status deassert,风扇故障解除,0,0x0100000A0001
+ alertPCIeFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.2305,PCIe in fault status,PCIe故障,2,0x010000070001
+ alertPCIeFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.33.2306,PCIe in fault status deassert,PCIe故障解除,0,0x010000070001
+ alertACPIStatusS0,.1.3.6.1.4.1.27500.1.1.1.1.500.10.34.1,ACPI status S0,ACPI状态S0,5,0x010000000006
+ alertACPIStatusS4S5,.1.3.6.1.4.1.27500.1.1.1.1.500.10.34.97,ACPI status,ACPI状态,5,0x010000000006
+ alertWatchDog2Expired,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.1,watchdog2 timer expired,watchdog2计时器已过期,2,0x0100000E0009
+ alertWatchDogExpiredDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.2,watchdog2 timer expired,watchdog2计时器已过期告警解除,0,0x0100000E0009
+ alertWatchDogReset,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.17,watchdog2 timer expired,看门狗重置,2,0x0100000E0009
+ alertWatchDogResetDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.18,watchdog2 timer expired,看门狗重置解除,0,0x0100000E0009
+ alertWatchDogPowerDown,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.33,watchdog2 timer expired,看门狗断电,2,0x0100000E0009
+ alertWatchDogPowerDownDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.34,watchdog2 timer expired,看门狗断电解除,0,0x0100000E0009
+ alertWatchDogPowerCycle,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.49,watchdog2 timer expired,看门狗电源运转,2,0x0100000E0009
+ alertWatchDogPowerCycleDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.35.50,watchdog2 timer expired,看门狗电源运转解除,0,0x0100000E0009
+ alertLANHeartLost,.1.3.6.1.4.1.27500.1.1.1.1.500.10.39.1,LAN heart beat lost,局域网心跳丢失告警,2,0x010000000006
+ alertLANHeartLostDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.39.2,LAN heart beat lost deassert,局域网心跳丢失告警解除,0,0x010000000006
+ alertSensorAccessibleFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.1,Sensor access degraded or unavailable,传感器访问故障告警,2,0x010000000006
+ alertSensorAccessibleFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.2,Sensor access degraded or unavailable deassert,传感器访问故障告警解除,0,0x010000000006
+ alertControllerAccessibleFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.17,Controller access degraded or unavailable,控制器访问故障告警,2,0x0100000E0008
+ alertControllerAccessibleFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.18,Controller access degraded or unavailable deassert,控制器访问故障告警解除,0,0x0100000E0008
+ alertFruFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.81,FRU failure,FRU故障,2,0x010000020001
+ alertFruFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.40.82,FRU failure deassert,FRU故障解除,0,0x010000020001
+ alertRTCBatterylow,.1.3.6.1.4.1.27500.1.1.1.1.500.10.41.1,RTC battery low,RTC电池低电量告警,2,0x010000090001
+ alertRTCBatterylowDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.41.2,RTC batterylow deassert,RTC电池低电量告警解除,0,0x010000090001
+ alertHardwareChange,.1.3.6.1.4.1.27500.1.1.1.1.500.10.43.1,Hardware change detected with associated Entity,检测到关联实体的硬件更改,5,0x010000000006
+ alertFirmwareChange,.1.3.6.1.4.1.27500.1.1.1.1.500.10.43.17,Firmware or software change detected with associated Entity,检测到关联实体的固件或软件更改,5,0x010000000006
+ alertHotSwaptoM0,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.1,fru hot swap to M0 status,通过热插拔变为M0状态,5,0x010000000006
+ alertHotSwaptoM1,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.17,fru hot swap to M1 status,通过热插拔到M1状态,5,0x010000000006
+ alertHotSwaptoM2,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.33,fru hot swap to M2 status,通过热插拔到M2状态,5,0x010000000006
+ alertHotSwaptoM3,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.49,fru hot swap to M3 status,通过热插拔到M3状态,5,0x010000000006
+ alertHotSwaptoM4,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.65,fru hot swap to M4 status,通过热插拔到M4状态,5,0x010000000006
+ alertHotSwaptoM5,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.81,fru hot swap to M5 status,通过热插拔到M5状态,5,0x010000000006
+ alertHotSwaptoM6,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.97,fru hot swap to M6 status,通过热插拔到M6状态,5,0x010000000006
+ alertHotSwaptoM7,.1.3.6.1.4.1.27500.1.1.1.1.500.10.240.113,fru hot swap to M7 status,通过热插拔到M7状态,5,0x010000000006
+ alertIPMBLinkStateAll,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.1,IPMB-A disabled. IPMB-B disabled,IPMB-A已禁用IPMB-B已禁用,2,0x010000000006
+ alertIPMBLinkStateAllDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.2,IPMB-A disabled. IPMB-B disabled deassert,IPMB-A已禁用IPMB-B禁用解除,0,0x010000000006
+ alertIPMBLinkStateB,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.17,IPMB-A enabled.IPMB-B disabled,启用IPMB-A禁用IPMB-B,2,0x010000000006
+ alertIPMBLinkStateBDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.18,IPMB-A enabled.IPMB-B disabled deassert,启用IPMB-A禁用IPMB-B解除,0,0x010000000006
+ alertIPMBLinkStateA,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.33,IPMB-A disabled.IPMB-B enabled,禁用IPMB-A启用IPMB-B,2,0x010000000006
+ alertIPMBLinkStateADeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.34,IPMB-A disabled.IPMB-B enabled deassert,禁用IPMB-A启用IPMB-B解除,0,0x010000000006
+ alertIPMBLinkStateNoFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.241.49,IPMB bus no fault,IPMB总线无故障,5,0x010000000006
+ alertTrapTestInstance,.1.3.6.1.4.1.27500.1.1.1.1.500.10.256.1,trap test,Trap测试,5,0x010000000005
+ alertOvertempMinor,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.113,temperature above minor threshold,一般过热告警,1,0x0100000E0005
+ alertOvertempMinorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.114,temperature above minor threshold deassert,一般过热告警解除,0,0x0100000E0005
+ alertOvertempMajor,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.145,temperature above major threshold,严重过热告警,2,0x0100000E0005
+ alertOvertempMajorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.146,temperature above major threshold deassert,严重过热告警解除,0,0x0100000E0005
+ alertOvertempCritical,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.177,temperature above critical threshold,紧急过热告警,3,0x0100000E0005
+ alertOvertempCriticalDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.257.178,temperature above critical threshold deassert,紧急过热告警解除,0,0x0100000E0005
+ alertCPUProchotState,.1.3.6.1.4.1.27500.1.1.1.1.500.10.775.17,CPU Prochot state asserted,CPU Prochot状态已声明,1,0x010000010001
+ alertCPUProchotStateDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.775.18,CPU Prochot state deasserted,CPU Prochot状态置为无效,0,0x010000010001
+ alertNoSDCardAssert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.781.17,No SD Card Assert,SD卡不存在,1,0x0101000B0001
+ alertNoSDCardDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.781.18,No SD Card Deassert,SD卡不存在告警解除,0,0x0101000B0001
+ alertPCIeError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.791.17,PCIe Error,PCIe错误,2,0x010000070001
+ alertPCIeErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.791.18,PCIe Error Deassert,PCIe错误解除,0,0x010000070001
+ alertPCHError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.793.17,Uncorrectable PCH error,无法纠正的PCH错误,3,0x010000000006
+ alertPCHErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.793.18,Uncorrectable PCH error Deassert,无法纠正的PCH错误解除,0,0x010000000006
+ alertUIDButtonPressed,.1.3.6.1.4.1.27500.1.1.1.1.500.10.788.17,UID button pressed,按下UID按钮,5,0x010000000006
+ alertPowerCapFail,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1042.17,Power capping fail assert,额定功率故障,2,0x010000000006
+ alertPowerCapFailDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1042.18,Power capping fail deassert,额定功率故障解除,0,0x010000000006
+ alertCardStatusFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1047.17,Raid or nic card fault ,卡状态故障,2,0x010000000006
+ alertCardStatusFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1047.18,Raid or nic card fault deassert,卡状态故障解除,0,0x010000000006
+ alertLCDFault,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1052.17,LCD fault ,LCD故障,2,0x010000000006
+ alertLCDFaultDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1052.18,LCD fault deassert,LCD故障解除,0,0x010000000006
+ alertCPUUsageHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1287.17,CPU usage over threshold ,CPU使用率超过阈值,1,0x010000010002
+ alertCPUUsageHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1287.18,CPU usage over threshold deassert,CPU使用率超过阈值故障解除,0,0x010000010002
+ alertMemoryUsageHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1292.17,Memory usage over threshold ,内存使用率超过阈值,1,0x010000050002
+ alertMemoryUsageHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1292.18,Memory usage over threshold deassert,内存使用率超过阈值故障解除,0,0x010000050002
+ alertDiskUsageHigh,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1293.17,Disk usage over threshold ,磁盘使用率超过阈值,1,0x010000030002
+ alertDiskUsageHighDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1293.18,Disk usage over threshold deassert,磁盘使用率超过阈值故障解除,0,0x010000030002
+ alertSystemWarmReset,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1810.129,Uncorrectable system error. Unable to locate the specific failure,无法纠正的系统错误,2,0x0100000E000A
+ alertSystemWarmResetDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1810.130,Uncorrectable system error deassert,无法纠正的系统错误解除,0,0x0100000E000A
+ alertModuleCritical,.1.3.6.1.4.1.27500.1.1.1.1.500.10.1813.33,transition to Critical from less severe,从不太严重的过渡到严重,5,0x010000000006
+ alertPSPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2057.18,power supply presence deassert,电源不在位,2,0x010000040002
+ alertPSPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2057.17,power supply presence ,电源不在位告警解除,0,0x010000040002
+ alertFanAbsent,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2058.1,fan absent ,风扇不在位,2,0x020000000002
+ alertFanAbsentDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2058.2,fan absent deassert,风扇不在位告警解除,0,0x020000000002
+ alertCardPresenceDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2071.18,card presence deassert,卡不在位,2,0x010000000006
+ alertCardPresence,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2071.17,card presence ,卡不在位告警解除,0,0x010000000006
+ alertLCDAbsent,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2076.1,LCD absent,LCD不存在,1,0x010000000006
+ alertLCDAbsentDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2076.2,LCD absent deassert,LCD存在,0,0x010000000006
+ alertCPUCoreIsolation,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2311.1,CPU core isolation,CPU隔离告警,2,0x010000010001
+ alertCPUCoreIsolationDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2311.2,CPU core isolation deassert,CPU隔离告警解除,0,0x010000010001
+ alertBMCBootUpAssert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2326.17,BMC boot up,BMC启动,5,0x010000000006
+ alertMemoryRiserOnline,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.49,Memory board online ,内存扩展在线,5,0x010000050001
+ alertMemoryRiserOnlineDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.50,Memory board online deassert,内存扩展在线解除,5,0x010000050001
+ alertMemoryRiserOffline,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.65,Memory board offline ,内存扩展离线,5,0x010000050001
+ alertMemoryRiserOfflineDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.66,Memory board offline deassert,内存扩展离线解除,5,0x010000050001
+ alertMemoryRiserInstallError,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.129,Memory riser install error ,内存扩展安装错误告警,2,0x010000050001
+ alertMemoryRiserInstallErrorDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2583.130,Memory riser install error deassert,内存扩展安装错误告警解除,0,0x010000050001
+ alertPSRedundancyLost,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2824.17,PS Redundancy lost,PS冗余丢失告警,2,0x010000040001
+ alertPSRedundancyLostDeassert,.1.3.6.1.4.1.27500.1.1.1.1.500.10.2824.18,PS Redundancy lost deassert,PS冗余丢失告警解除,0,0x010000040001
