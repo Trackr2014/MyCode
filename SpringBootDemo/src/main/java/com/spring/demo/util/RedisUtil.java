@@ -2,6 +2,7 @@ package com.spring.demo.util;
 
 import java.io.Serializable;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
@@ -105,4 +106,12 @@ public class RedisUtil {
         return result;
     }
 
+    public static void main(String[] args) {
+		String uUIDString = UUID.randomUUID().toString();
+		String tmpString = uUIDString.substring(5).concat("sugou");
+		String newString = tmpString + "sugou";
+		System.out.println(uUIDString);
+		System.out.println(tmpString);
+		System.out.println(newString);
+	}
 }
